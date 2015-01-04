@@ -16,7 +16,7 @@
         &nbsp;<br />
         <br />
 
-        <asp:Button ID="btnAdmin" runat="server" Text="Admin" OnClick="btnAdmin_Click"/>
+        <asp:Button ID="btnAdmin" runat="server" Text="LogOut" OnClick="btnAdmin_Click"/>
     </div>
     </form>
 </body>

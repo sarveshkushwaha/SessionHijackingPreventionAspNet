@@ -11,25 +11,15 @@ namespace SessionHijackingPreventionAspNet
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-
-            if (Session["User"].ToString() == "Simpleuser" )
-            {
-                lblAdmin.Visible = false;
-            }
-        
-            else if (Session["User"].ToString() == "Admin")
+               if (Session["User"].ToString() == "Admin")
                 {
                     lblAdmin.Visible = true;
                 }
-            
-            
-
         }
 
         protected void btnAdmin_Click(object sender, EventArgs e)
         {
-            Session["User"] = "Admin";
+            Response.Redirect("Logout.aspx");
         }
     }
 }

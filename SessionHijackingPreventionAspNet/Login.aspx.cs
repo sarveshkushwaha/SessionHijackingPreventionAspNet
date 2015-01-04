@@ -19,9 +19,14 @@ namespace SessionHijackingPreventionAspNet
             if (TextBox1.Text != "" && TextBox1.Text == "Admin")
             {
                 Session["User"] = "Admin";
-                Response.Redirect("SessionHijacking.aspx");
+                
 
             }
+            else
+            {
+                Session["User"] = "SimpleUser";
+            }
+            Response.Redirect("SessionHijacking.aspx");
         }
     }
 }
